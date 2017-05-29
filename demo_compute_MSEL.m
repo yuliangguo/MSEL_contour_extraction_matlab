@@ -77,9 +77,9 @@ for c = 1:length(img_files)
     input = [edge_src_path img_files(c).name(1:end-4) '.edg'];
     output = [cfrags_dst_path img_files(c).name(1:end-4) '.cem'];
     
-%     cmd = ['!util/dborl_compute_curve_frags ' input ' ' output];
-%     eval(cmd);
-    mex_compute_curve_frags(input, output);
+    cmd = ['!util/dborl_compute_curve_frags ' input ' ' output];
+    eval(cmd);
+%     mex_compute_curve_frags(input, output);
     
     %% Break curve fragment basing on geometric and semantic cues
     % load in computed curve fragment candidates
