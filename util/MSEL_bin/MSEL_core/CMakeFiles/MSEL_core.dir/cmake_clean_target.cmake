@@ -1,0 +1,3 @@
+FILE(REMOVE_RECURSE
+  "libMSEL_core.a"
+)

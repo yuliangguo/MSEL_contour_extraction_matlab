@@ -37,7 +37,7 @@
 
 
 
-		# dbdet codes from VXL
+		# dbdet codes from lemsvxl
 		dbdet_appearance.h
 		dbdet_cem_file_io.h			dbdet_cem_file_io.cxx
 		dbdet_CFTG.h
@@ -73,7 +73,7 @@
 		dbdet_sel_storage.h			dbdet_sel_storage.cxx			dbdet_sel_storage_sptr.h
 		dbdet_sel_utils.h
 
-		# Templates from dbdet in vxd
+		# Templates from dbdet in lemsvxl
 		vbl_smart_ptr+dbdet_edgemap-.cxx
 		vbl_smart_ptr+dbdet_sel_base-.cxx
 
