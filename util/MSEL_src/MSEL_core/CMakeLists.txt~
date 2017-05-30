@@ -1,11 +1,32 @@
 
-	INCLUDE_DIRECTORIES( ${VXL_GEL_INCLUDE_DIR} )
-	INCLUDE_DIRECTORIES( ${VXL_MUL_INCLUDE_DIR} )	
+	#INCLUDE_DIRECTORIES( ${VXL_GEL_INCLUDE_DIR} )
+	#INCLUDE_DIRECTORIES( ${VXL_MUL_INCLUDE_DIR} )
 	#MESSAGE("VXL_INCLUDE_DIR is ${VXL_CORE_INCLUDE_DIR}")
 	#MESSAGE("VXL_GEL_INCLUDE_DIR is ${VXL_GEL_INCLUDE_DIR}")
 	#MESSAGE("VXL_MUL_INCLUDE_DIR is ${VXL_MUL_INCLUDE_DIR}")
+
+	configure_file(
+	  ${CMAKE_SOURCE_DIR}/MSEL_core/dbtest_where_root_dir.h.in
+	  ${CMAKE_BINARY_DIR}/MSEL_core/dbtest_where_root_dir.h ESCAPE_QUOTES
+	)
+
+	find_path(DBTEST_WHERE_ROOT_DIR_H_DIRECTORY
+		  dbtest_where_root_dir.h
+		  ${lems_BINARY_DIR}/basic/dbtest 
+		  DOC "Path to directory containing the file dbtest_where_root_dir.h")
+
+	if (DBTEST_WHERE_ROOT_DIR_H_DIRECTORY)
+	  add_definitions(-DDBTEST_WHERE_ROOT_DIR_H_EXISTS)
+	  include_directories(${DBTEST_WHERE_ROOT_DIR_H_DIRECTORY})
+	endif(DBTEST_WHERE_ROOT_DIR_H_DIRECTORY)
+
+
 	set( MSEL_core_sources
+
+
+
 		# From bgld and bnld in vxd
+		bgld_diffgeom.h 			bgld_diffgeom.cxx
 		bgld_eulerspiral_base.h
 		bgld_eulerspiral.h			bgld_eulerspiral.cxx
 		bgld_arc.h 				bgld_arc.cxx
@@ -22,12 +43,17 @@
 		bpro1_process.h 			bpro1_process.cxx			bpro1_process_sptr.h
 		bpro1_storage.h			 	bpro1_storage.cxx			bpro1_storage_sptr.h
 		vidpro1_vsol2D_storage.h		vidpro1_vsol2D_storage.cxx		vidpro1_vsol2D_storage_sptr.h
+		vidpro1_image_storage.h			vidpro1_image_storage.cxx		vidpro1_image_storage_sptr.h
+		vidpro1_save_cem_process.h		vidpro1_save_cem_process.cxx
+		bsold_file_io.h				bsold_file_io.cxx
 
 		# Templates from breye1d in vxd
 		bpro1_parameters+bool-.cxx
 		bpro1_parameters+bpro_filepath-.cxx
 		bpro1_parameters+double-.cxx
+		bpro1_parameters+vcl_string-.cxx
 		bpro1_parameters+unsigned-.cxx
+		bpro1_parameters+int-.cxx
 		vbl_smart_ptr+bpro1_storage-.cxx
 		vbl_smart_ptr+bpro1_process-.cxx
 		vbl_smart_ptr+bpro1_parameters-.cxx				
@@ -37,7 +63,9 @@
 
 
 
-		# dbdet codes from VXL
+		# dbdet codes from lemsvxl
+		dbgl_diffgeom.h				dbgl_diffgeom.cxx	
+		dbtest_root_dir.h			dbtest_root_dir.cxx
 		dbdet_appearance.h
 		dbdet_cem_file_io.h			dbdet_cem_file_io.cxx
 		dbdet_CFTG.h
@@ -73,13 +101,35 @@
 		dbdet_sel_storage.h			dbdet_sel_storage.cxx			dbdet_sel_storage_sptr.h
 		dbdet_sel_utils.h
 
-		# Templates from dbdet in vxd
+
+		dbdet_contour_breaker.h			dbdet_contour_breaker.cxx
+		dbdet_contour_ranker_process.h		dbdet_contour_ranker_process.cxx
+		dbdet_curve_fragment_cues.h		dbdet_curve_fragment_cues.cxx
+		dbdet_curve_fragment_ranker.h
+		dbdet_edge_appearance_util.h		dbdet_edge_appearance_util.cxx
+		dbdet_filter_bank.h			dbdet_filter_bank.cxx
+		dbdet_filter_util.h
+		dbdet_texton_classifier.h		dbdet_texton_classifier.cxx
+		dbdet_yuliang_features.h		dbdet_yuliang_features.cxx
+		dbdet_contour_breaker_geometric_process.h 	dbdet_contour_breaker_geometric_process.cxx
+		dbdet_graphical_model_contour_merge_process.h	dbdet_graphical_model_contour_merge_process.cxx
+		dbdet_graphical_model_contour_merge.h		dbdet_graphical_model_contour_merge.cxx
+
+		dbdet_gaussian_kernel.h
+		dbdet_interp_kernel.h
+		dbdet_kernel.h
+		dbdet_nms.h				dbdet_nms.cxx
+		dbdet_subpix_convolution.h
+		dbdet_third_order_color_detector.h	dbdet_third_order_color_detector.cxx
+		dbdet_third_order_color_edge_detector_process.h	dbdet_third_order_color_edge_detector_process.cxx
+
+
+		# Templates from dbdet in lemsvxl
 		vbl_smart_ptr+dbdet_edgemap-.cxx
 		vbl_smart_ptr+dbdet_sel_base-.cxx
 
-		dborl_edge_det_link_main.cxx
 	)
 	add_library (MSEL_core ${MSEL_core_sources} )
-	target_link_libraries (MSEL_core pdf1d vdgl) 
+	target_link_libraries (MSEL_core pdf1d vdgl vil_algo bil_algo brip) 
 
 

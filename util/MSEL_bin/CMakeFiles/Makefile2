@@ -50,10 +50,80 @@ EQUALS = =
 CMAKE_EDIT_COMMAND = /usr/bin/ccmake
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/guoy/MSEL_src
+CMAKE_SOURCE_DIR = /home/guoy/workspace/MSEL/MSEL_src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/guoy/MSEL_bin
+CMAKE_BINARY_DIR = /home/guoy/workspace/MSEL/MSEL_bin
+
+#=============================================================================
+# Target rules for target CMakeFiles/MSEL_compute_contours_from_edges.dir
+
+# All Build rule for target.
+CMakeFiles/MSEL_compute_contours_from_edges.dir/all: MSEL_core/CMakeFiles/MSEL_core.dir/all
+	$(MAKE) -f CMakeFiles/MSEL_compute_contours_from_edges.dir/build.make CMakeFiles/MSEL_compute_contours_from_edges.dir/depend
+	$(MAKE) -f CMakeFiles/MSEL_compute_contours_from_edges.dir/build.make CMakeFiles/MSEL_compute_contours_from_edges.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/guoy/workspace/MSEL/MSEL_bin/CMakeFiles  1
+	@echo "Built target MSEL_compute_contours_from_edges"
+.PHONY : CMakeFiles/MSEL_compute_contours_from_edges.dir/all
+
+# Include target in all.
+all: CMakeFiles/MSEL_compute_contours_from_edges.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/MSEL_compute_contours_from_edges.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/guoy/workspace/MSEL/MSEL_bin/CMakeFiles 70
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/MSEL_compute_contours_from_edges.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/guoy/workspace/MSEL/MSEL_bin/CMakeFiles 0
+.PHONY : CMakeFiles/MSEL_compute_contours_from_edges.dir/rule
+
+# Convenience name for target.
+MSEL_compute_contours_from_edges: CMakeFiles/MSEL_compute_contours_from_edges.dir/rule
+.PHONY : MSEL_compute_contours_from_edges
+
+# clean rule for target.
+CMakeFiles/MSEL_compute_contours_from_edges.dir/clean:
+	$(MAKE) -f CMakeFiles/MSEL_compute_contours_from_edges.dir/build.make CMakeFiles/MSEL_compute_contours_from_edges.dir/clean
+.PHONY : CMakeFiles/MSEL_compute_contours_from_edges.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/MSEL_compute_contours_from_edges.dir/clean
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/MSEL_compute_contours_from_img.dir
+
+# All Build rule for target.
+CMakeFiles/MSEL_compute_contours_from_img.dir/all: MSEL_core/CMakeFiles/MSEL_core.dir/all
+	$(MAKE) -f CMakeFiles/MSEL_compute_contours_from_img.dir/build.make CMakeFiles/MSEL_compute_contours_from_img.dir/depend
+	$(MAKE) -f CMakeFiles/MSEL_compute_contours_from_img.dir/build.make CMakeFiles/MSEL_compute_contours_from_img.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/guoy/workspace/MSEL/MSEL_bin/CMakeFiles  2
+	@echo "Built target MSEL_compute_contours_from_img"
+.PHONY : CMakeFiles/MSEL_compute_contours_from_img.dir/all
+
+# Include target in all.
+all: CMakeFiles/MSEL_compute_contours_from_img.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/MSEL_compute_contours_from_img.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/guoy/workspace/MSEL/MSEL_bin/CMakeFiles 70
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/MSEL_compute_contours_from_img.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/guoy/workspace/MSEL/MSEL_bin/CMakeFiles 0
+.PHONY : CMakeFiles/MSEL_compute_contours_from_img.dir/rule
+
+# Convenience name for target.
+MSEL_compute_contours_from_img: CMakeFiles/MSEL_compute_contours_from_img.dir/rule
+.PHONY : MSEL_compute_contours_from_img
+
+# clean rule for target.
+CMakeFiles/MSEL_compute_contours_from_img.dir/clean:
+	$(MAKE) -f CMakeFiles/MSEL_compute_contours_from_img.dir/build.make CMakeFiles/MSEL_compute_contours_from_img.dir/clean
+.PHONY : CMakeFiles/MSEL_compute_contours_from_img.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/MSEL_compute_contours_from_img.dir/clean
+.PHONY : clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/dborl_compute_curve_frags.dir
@@ -62,7 +132,7 @@ CMAKE_BINARY_DIR = /home/guoy/MSEL_bin
 CMakeFiles/dborl_compute_curve_frags.dir/all: MSEL_core/CMakeFiles/MSEL_core.dir/all
 	$(MAKE) -f CMakeFiles/dborl_compute_curve_frags.dir/build.make CMakeFiles/dborl_compute_curve_frags.dir/depend
 	$(MAKE) -f CMakeFiles/dborl_compute_curve_frags.dir/build.make CMakeFiles/dborl_compute_curve_frags.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/guoy/MSEL_bin/CMakeFiles  49
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/guoy/workspace/MSEL/MSEL_bin/CMakeFiles  72
 	@echo "Built target dborl_compute_curve_frags"
 .PHONY : CMakeFiles/dborl_compute_curve_frags.dir/all
 
@@ -72,9 +142,9 @@ all: CMakeFiles/dborl_compute_curve_frags.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/dborl_compute_curve_frags.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/guoy/MSEL_bin/CMakeFiles 49
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/guoy/workspace/MSEL/MSEL_bin/CMakeFiles 70
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/dborl_compute_curve_frags.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/guoy/MSEL_bin/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/guoy/workspace/MSEL/MSEL_bin/CMakeFiles 0
 .PHONY : CMakeFiles/dborl_compute_curve_frags.dir/rule
 
 # Convenience name for target.
@@ -112,7 +182,7 @@ MSEL_core/preinstall:
 MSEL_core/CMakeFiles/MSEL_core.dir/all:
 	$(MAKE) -f MSEL_core/CMakeFiles/MSEL_core.dir/build.make MSEL_core/CMakeFiles/MSEL_core.dir/depend
 	$(MAKE) -f MSEL_core/CMakeFiles/MSEL_core.dir/build.make MSEL_core/CMakeFiles/MSEL_core.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/guoy/MSEL_bin/CMakeFiles  1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/guoy/workspace/MSEL/MSEL_bin/CMakeFiles  3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71
 	@echo "Built target MSEL_core"
 .PHONY : MSEL_core/CMakeFiles/MSEL_core.dir/all
 
@@ -122,9 +192,9 @@ all: MSEL_core/CMakeFiles/MSEL_core.dir/all
 
 # Build rule for subdir invocation for target.
 MSEL_core/CMakeFiles/MSEL_core.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/guoy/MSEL_bin/CMakeFiles 48
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/guoy/workspace/MSEL/MSEL_bin/CMakeFiles 69
 	$(MAKE) -f CMakeFiles/Makefile2 MSEL_core/CMakeFiles/MSEL_core.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/guoy/MSEL_bin/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/guoy/workspace/MSEL/MSEL_bin/CMakeFiles 0
 .PHONY : MSEL_core/CMakeFiles/MSEL_core.dir/rule
 
 # Convenience name for target.

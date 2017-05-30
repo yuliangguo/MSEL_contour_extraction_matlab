@@ -1,4 +1,4 @@
-# Install script for directory: /home/guoy/MSEL_src/MSEL_core
+# Install script for directory: /home/guoy/workspace/MSEL/MSEL_src/MSEL_core
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)

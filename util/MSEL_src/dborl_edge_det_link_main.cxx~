@@ -20,7 +20,7 @@
 #include <vul/vul_file.h>
 #include <vil/vil_image_resource_sptr.h>
 #include <vil/vil_load.h>
-//#include "dborl_utilities.h"
+//#include <dborl/algo/dborl_utilities.h>
 #include <vul/vul_timer.h>
 #include <vcl_set.h>
 
@@ -30,22 +30,22 @@
 //#include <vidpro1/process/vidpro1_save_con_process.h>
 //#include <vidpro1/process/vidpro1_save_image_process.h>
 
-//#include "dbdet_third_order_edge_detector_process.h"
-//#include "dbdet_third_order_color_edge_detector_process.h"
-#include "dbdet_sel_process.h"
-//#include "dbdet_generic_linker_process.h"
-//#include "dbdet_sel_extract_contours_process.h"
-//#include "dbdet_contour_tracer_process.h"
-//#include "dbdet_prune_curves_process.h"
-//#include "dbdet_save_edg_process.h"
-#include "dbdet_load_edg_process.h"
-#include "dbdet_edgemap_storage.h"
-//#include "dbdet_save_cvlet_map_process.h"
-//#include "dbdet_load_cem_process.h"
-#include "dbdet_save_cem_process.h"
-//#include "dbdet_prune_fragments_Logistic_Regression.h"
-#include "dbdet_sel_storage_sptr.h"
-#include "dbdet_sel_storage.h"
+//#include <dbdet/pro/dbdet_third_order_edge_detector_process.h>
+//#include <dbdet/pro/dbdet_third_order_color_edge_detector_process.h>
+#include "MSEL_core/dbdet_sel_process.h"
+//#include <dbdet/pro/dbdet_generic_linker_process.h>
+//#include <dbdet/pro/dbdet_sel_extract_contours_process.h>
+//#include <dbdet/pro/dbdet_contour_tracer_process.h>
+//#include <dbdet/pro/dbdet_prune_curves_process.h>
+//#include <dbdet/pro/dbdet_save_edg_process.h>
+//#include <dbdet/pro/dbdet_load_edg_process.h>
+#include "MSEL_core/dbdet_edgemap_storage.h"
+//#include <dbdet/pro/dbdet_save_cvlet_map_process.h>
+//#include <dbdet/pro/dbdet_load_cem_process.h>
+//#include <dbdet/pro/dbdet_save_cem_process.h>
+//#include <dbdet/pro/dbdet_prune_fragments_Logistic_Regression.h>
+#include "MSEL_core/dbdet_sel_storage_sptr.h"
+#include "MSEL_core/dbdet_sel_storage.h"
 
 int main(int argc, char *argv[]) {
 

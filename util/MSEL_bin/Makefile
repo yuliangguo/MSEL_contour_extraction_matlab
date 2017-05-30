@@ -42,10 +42,10 @@ EQUALS = =
 CMAKE_EDIT_COMMAND = /usr/bin/ccmake
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/guoy/MSEL_src
+CMAKE_SOURCE_DIR = /home/guoy/workspace/MSEL/MSEL_src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/guoy/MSEL_bin
+CMAKE_BINARY_DIR = /home/guoy/workspace/MSEL/MSEL_bin
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -72,9 +72,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/guoy/MSEL_bin/CMakeFiles /home/guoy/MSEL_bin/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/guoy/workspace/MSEL/MSEL_bin/CMakeFiles /home/guoy/workspace/MSEL/MSEL_bin/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/guoy/MSEL_bin/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/guoy/workspace/MSEL/MSEL_bin/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -102,6 +102,32 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named MSEL_compute_contours_from_edges
+
+# Build rule for target.
+MSEL_compute_contours_from_edges: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 MSEL_compute_contours_from_edges
+.PHONY : MSEL_compute_contours_from_edges
+
+# fast build rule for target.
+MSEL_compute_contours_from_edges/fast:
+	$(MAKE) -f CMakeFiles/MSEL_compute_contours_from_edges.dir/build.make CMakeFiles/MSEL_compute_contours_from_edges.dir/build
+.PHONY : MSEL_compute_contours_from_edges/fast
+
+#=============================================================================
+# Target rules for targets named MSEL_compute_contours_from_img
+
+# Build rule for target.
+MSEL_compute_contours_from_img: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 MSEL_compute_contours_from_img
+.PHONY : MSEL_compute_contours_from_img
+
+# fast build rule for target.
+MSEL_compute_contours_from_img/fast:
+	$(MAKE) -f CMakeFiles/MSEL_compute_contours_from_img.dir/build.make CMakeFiles/MSEL_compute_contours_from_img.dir/build
+.PHONY : MSEL_compute_contours_from_img/fast
+
+#=============================================================================
 # Target rules for targets named dborl_compute_curve_frags
 
 # Build rule for target.
@@ -126,6 +152,54 @@ MSEL_core: cmake_check_build_system
 MSEL_core/fast:
 	$(MAKE) -f MSEL_core/CMakeFiles/MSEL_core.dir/build.make MSEL_core/CMakeFiles/MSEL_core.dir/build
 .PHONY : MSEL_core/fast
+
+MSEL_compute_contours_from_edges_main.o: MSEL_compute_contours_from_edges_main.cxx.o
+.PHONY : MSEL_compute_contours_from_edges_main.o
+
+# target to build an object file
+MSEL_compute_contours_from_edges_main.cxx.o:
+	$(MAKE) -f CMakeFiles/MSEL_compute_contours_from_edges.dir/build.make CMakeFiles/MSEL_compute_contours_from_edges.dir/MSEL_compute_contours_from_edges_main.cxx.o
+.PHONY : MSEL_compute_contours_from_edges_main.cxx.o
+
+MSEL_compute_contours_from_edges_main.i: MSEL_compute_contours_from_edges_main.cxx.i
+.PHONY : MSEL_compute_contours_from_edges_main.i
+
+# target to preprocess a source file
+MSEL_compute_contours_from_edges_main.cxx.i:
+	$(MAKE) -f CMakeFiles/MSEL_compute_contours_from_edges.dir/build.make CMakeFiles/MSEL_compute_contours_from_edges.dir/MSEL_compute_contours_from_edges_main.cxx.i
+.PHONY : MSEL_compute_contours_from_edges_main.cxx.i
+
+MSEL_compute_contours_from_edges_main.s: MSEL_compute_contours_from_edges_main.cxx.s
+.PHONY : MSEL_compute_contours_from_edges_main.s
+
+# target to generate assembly for a file
+MSEL_compute_contours_from_edges_main.cxx.s:
+	$(MAKE) -f CMakeFiles/MSEL_compute_contours_from_edges.dir/build.make CMakeFiles/MSEL_compute_contours_from_edges.dir/MSEL_compute_contours_from_edges_main.cxx.s
+.PHONY : MSEL_compute_contours_from_edges_main.cxx.s
+
+MSEL_compute_contours_from_img_main.o: MSEL_compute_contours_from_img_main.cxx.o
+.PHONY : MSEL_compute_contours_from_img_main.o
+
+# target to build an object file
+MSEL_compute_contours_from_img_main.cxx.o:
+	$(MAKE) -f CMakeFiles/MSEL_compute_contours_from_img.dir/build.make CMakeFiles/MSEL_compute_contours_from_img.dir/MSEL_compute_contours_from_img_main.cxx.o
+.PHONY : MSEL_compute_contours_from_img_main.cxx.o
+
+MSEL_compute_contours_from_img_main.i: MSEL_compute_contours_from_img_main.cxx.i
+.PHONY : MSEL_compute_contours_from_img_main.i
+
+# target to preprocess a source file
+MSEL_compute_contours_from_img_main.cxx.i:
+	$(MAKE) -f CMakeFiles/MSEL_compute_contours_from_img.dir/build.make CMakeFiles/MSEL_compute_contours_from_img.dir/MSEL_compute_contours_from_img_main.cxx.i
+.PHONY : MSEL_compute_contours_from_img_main.cxx.i
+
+MSEL_compute_contours_from_img_main.s: MSEL_compute_contours_from_img_main.cxx.s
+.PHONY : MSEL_compute_contours_from_img_main.s
+
+# target to generate assembly for a file
+MSEL_compute_contours_from_img_main.cxx.s:
+	$(MAKE) -f CMakeFiles/MSEL_compute_contours_from_img.dir/build.make CMakeFiles/MSEL_compute_contours_from_img.dir/MSEL_compute_contours_from_img_main.cxx.s
+.PHONY : MSEL_compute_contours_from_img_main.cxx.s
 
 dborl_edge_det_link_main.o: dborl_edge_det_link_main.cxx.o
 .PHONY : dborl_edge_det_link_main.o
@@ -157,10 +231,18 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... MSEL_compute_contours_from_edges"
+	@echo "... MSEL_compute_contours_from_img"
 	@echo "... dborl_compute_curve_frags"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... MSEL_core"
+	@echo "... MSEL_compute_contours_from_edges_main.o"
+	@echo "... MSEL_compute_contours_from_edges_main.i"
+	@echo "... MSEL_compute_contours_from_edges_main.s"
+	@echo "... MSEL_compute_contours_from_img_main.o"
+	@echo "... MSEL_compute_contours_from_img_main.i"
+	@echo "... MSEL_compute_contours_from_img_main.s"
 	@echo "... dborl_edge_det_link_main.o"
 	@echo "... dborl_edge_det_link_main.i"
 	@echo "... dborl_edge_det_link_main.s"
